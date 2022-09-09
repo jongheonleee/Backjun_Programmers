@@ -1,12 +1,7 @@
 import collections
 def solution(maps):
-    if len(maps) == 1:
-        if 0 in maps:
-            return -1
-        
-    if len(maps[0]) == 1:
-        if 0 in maps:
-            return -1
+    if (len(maps) == 1 or len(maps[0]) == 1) and 0 in maps:
+        return -1
 
     row, col = len(maps), len(maps[0])
     queue = collections.deque([(0, 0)])
