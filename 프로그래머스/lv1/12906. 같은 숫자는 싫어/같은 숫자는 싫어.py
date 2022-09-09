@@ -1,19 +1,11 @@
-from collections import deque
 def solution(arr):
-    deq = deque()
-    ans = []
+    st = []
     
     for num in arr:
-        deq.append(num)
-        
-    for cand in deq:
-        if len(ans) == 0:
-            ans.append(cand)
+        if len(st) == 0:
+            st.append(num)
             
-        if cand == ans[-1]:
-            continue
+        elif st[-1] != num:
+            st.append(num)
             
-        else:
-            ans.append(cand)
-            
-    return ans
+    return st
