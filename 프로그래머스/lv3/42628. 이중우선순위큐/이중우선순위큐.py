@@ -1,4 +1,3 @@
-import collections
 import heapq
 def solution(operations):
     max_heap, min_heap = [], []
