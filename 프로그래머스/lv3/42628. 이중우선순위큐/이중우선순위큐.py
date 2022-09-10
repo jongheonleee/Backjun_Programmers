@@ -17,4 +17,4 @@ def solution(operations):
             min_num = heapq.heappop(min_heap)
             max_heap.remove(-min_num)
             
-    return [-heapq.heappop(max_heap), heapq.heappop(min_heap)] if len(max_heap) >= 1 and len(min_heap) >= 1 else [0, 0]
+    return [-heapq.heappop(max_heap), heapq.heappop(min_heap)] if max_heap and min_heap else [0, 0]
