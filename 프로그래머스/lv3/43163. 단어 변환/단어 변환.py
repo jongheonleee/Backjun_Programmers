@@ -2,22 +2,11 @@ import math
 import collections
 def solution(begin, target, words):
     answer = math.inf 
-
     similar_map = collections.defaultdict(list)
-    similar_map[begin] = []
-    for w in words:
-        match_cnt = 0
-        
-        for i in range(len(w)):
-            if w[i] == begin[i]:
-                match_cnt += 1
-                
-        if match_cnt == len(w) - 1:
-            similar_map[begin] += [w]
             
-    for w1 in words:
+    for w1 in [begin] + words:
         for w2 in words:
-            if w1 == w2 or begin in [w1, w2]:
+            if w1 == w2:
                 continue
                 
             match_cnt = 0
