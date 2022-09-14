@@ -1,13 +1,11 @@
 def solution(number, k):
-    answer = [] # Stack
+    st = []
     
-    for num in number:
-        while k > 0 and answer and answer[-1] < num:
-            answer.pop()
+    for n in number:
+        while st and st[-1] < n and k > 0:
+            st.pop()
             k -= 1
-        answer.append(num)
+            
+        st.append(n)
         
-    return ''.join(answer[:len(answer) - k])
-    
-
-    
+    return ''.join(st[:len(st)-k])
