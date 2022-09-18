@@ -1,7 +1,9 @@
 def solution(n, costs):
     answer = 0
     costs.sort(key=lambda x:x[2])
-    connection = [costs[0][0]]
+    #connection = [costs[0][0]]
+    connection = set()
+    connection.add(costs[0][0])
     
     while len(connection) < n:
         for i, cost in enumerate(costs):
@@ -10,9 +12,9 @@ def solution(n, costs):
 
             if cost[0] in connection or cost[1] in connection:
                 answer += cost[2]
-                connection.append(cost[0])
-                connection.append(cost[1])
-                connection = list(set(connection))
+                connection.add(cost[0])
+                connection.add(cost[1])
+                # connection = list(set(connection))
                 costs.pop(i)
                 break
                 
