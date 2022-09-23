@@ -1,4 +1,5 @@
-# backjun_programmers_dsa
+# Backjun_Programmers
+
 
 <ol>
   <li><a href="https://www.notion.so/a862865551174af6a8dc2e5bf160d100">문제 풀이 정리 노트</a></li>
